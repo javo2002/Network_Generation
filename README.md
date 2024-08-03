@@ -1,7 +1,3 @@
-Sure, I can include a detailed breakdown of the code in the README file. Here is the updated version:
-
----
-
 # Network Traffic Log Generator
 
 This Python script generates synthetic network traffic log data and appends it to a file named `network_traffic.log`. The script runs continuously, simulating real-time log entries.
@@ -110,6 +106,10 @@ with open('network_traffic.log', 'a') as file:  # Use 'a' to append to the file
 ## Customization
 
 You can customize the script by modifying the lists of users, actions, and IP addresses to suit your needs.
+
+## Reset
+
+Use `clear_log.py` to clear the log file.
 
 ## Contributing
 
