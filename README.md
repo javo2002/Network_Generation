@@ -59,7 +59,7 @@ import time
 from datetime import datetime, timedelta
 
 # List of sample data
-users = ['alice', 'bob', 'charlie', 'dave']
+users = ['alice', 'bob', 'charlie', 'dave', 'jim', 'justin', 'William']
 actions = ['login', 'logout', 'file_download', 'file_upload', 'access_denied']
 ip_addresses = ['192.168.1.{}'.format(i) for i in range(1, 101)]
 
@@ -76,8 +76,9 @@ with open('network_traffic.log', 'a') as file:  # Use 'a' to append to the file
         file.write(log_entry)
         file.flush()  # Ensure data is written to disk immediately
 
-        # Simulate real-time log generation
-        time.sleep(0.01)
+        # Simulate real-time log generation with variable sleep times
+        time.sleep(random.uniform(1, 8))
+
 ```
 
 ### Importing Libraries
@@ -101,7 +102,7 @@ with open('network_traffic.log', 'a') as file:  # Use 'a' to append to the file
 - If the action is a file download or upload, generate a random file size; otherwise, set the size to 0.
 - Format the log entry as a string and write it to the file.
 - Flush the file buffer to ensure data is written to disk immediately.
-- Introduce a short delay (`time.sleep(0.01)`) to simulate real-time log generation.
+- Introduce a short delay (`time.sleep(random.uniform(1, 8))`) to simulate real-time log generation.
 
 ## Customization
 
